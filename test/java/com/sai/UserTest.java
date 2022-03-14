@@ -83,4 +83,27 @@ public class UserTest
         boolean isEmailInvalid = us.checkEmail("almas@.com");
         Assert.assertFalse(isEmailInvalid);
     }
+    @Test
+	/**
+	 * created testPhoneNumber_MustReturnTrue() for True condition
+	 */
+	public void testPhoneNumber_MustReturnTrue() {
+		User us = new User();
+		/**
+		 * calling checkPhoneNum method to see phoneNumber is valid
+		 */
+		boolean isPhoneNumberValid = us.checkPhoneNum("91 7903990740");
+		Assert.assertTrue(isPhoneNumberValid);
+	}
+
+	@Test
+	/**
+	 * created testPhoneNumber_MustReturnFalse() for False condition
+	 */
+	public void testPhoneNumber_MustReturnFalse()
+	{
+		User us = new User();
+		boolean isPhoneNumberInValid = us.checkPhoneNum("7903990740");
+		Assert.assertFalse(isPhoneNumberInValid);
+	}
 }

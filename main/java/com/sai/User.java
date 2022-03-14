@@ -1,5 +1,7 @@
 package com.sai;
 
+import org.junit.Test;
+
 public class User 
 {
 	
@@ -21,7 +23,7 @@ public class User
 		}
 
 		/**
-		 * created method Lname and passing parameter in this it will check LastName is
+		 * created method L name and passing parameter in this it will check LastName is
 		 * valid or not result will be in true or false because method is boolean type
 		 * 
 		 * @param Lname -LastName of the String
@@ -39,8 +41,25 @@ public class User
 		 * @param emailID -passing emailId
 		 * @return -return to method created
 		 */
-		public boolean checkEmail(String emailID) {
+		public boolean checkEmail(String emailID) 
+		{
 			return (emailID.matches("^[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*[@][0-9A-Za-z]+([.][a-zA-Z]{2,4})*$"));
+		}
+		@Test
+		/**
+		 * created testPhoneNumber_MustReturnFalse() for False condition
+		 */
+		/**
+		 * created method checkPhoneNum and passing parameter in this it will check
+		 * phoneNumber is valid or not result will be in true or false because method is
+		 * boolean type
+		 * 
+		 * @param phoneNum -passing phoneNumber
+		 * @return -return to method created
+		 */
+		public boolean checkPhoneNum(String phoneNum)
+		{
+			return (phoneNum.matches("91\\s[0-9]{10}"));
 		}
 	}
 
