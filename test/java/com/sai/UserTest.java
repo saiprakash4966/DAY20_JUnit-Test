@@ -20,7 +20,7 @@ public class UserTest
 			/**
 			 * calling checkFName method to see first name is valid
 			 */
-			boolean isFNameValid = userRegistration.checkFName("Almas");
+			boolean isFNameValid = userRegistration.checkFName("Saiprakash");
 			Assert.assertTrue(isFNameValid);
 		}
 
@@ -31,7 +31,7 @@ public class UserTest
 		public void testFirstNameInvalidMustReturnFalse()
 		{
 			User us = new User();
-			boolean isFnameValid = us.checkFName("almas");
+			boolean isFnameValid = us.checkFName("Saiprakash");
 			Assert.assertFalse(isFnameValid);
 		}
 
