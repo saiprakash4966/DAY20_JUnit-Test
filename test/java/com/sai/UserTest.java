@@ -5,34 +5,57 @@ import org.junit.Test;
 
 public class UserTest
 {
-	
 
-		@Test
+	@Test
+	/**
+	 * created method testingFirstName() to check first Name is valid or not
+	 */
+	public void testingFirstName()
+	{
 		/**
-		 * created method testingFirstName() to check first name is valid or not
+		 * Creating Object for UserRegistration class
 		 */
-		public void testingFirstName() 
-		{
-			/**
-			 * Creating Object for UserRegistration class
-			 */
-			User userRegistration = new User();
-			/**
-			 * calling checkFName method to see first name is valid
-			 */
-			boolean isFNameValid = userRegistration.checkFName("Almas");
-			Assert.assertTrue(isFNameValid);
-		}
-
-		@Test
+		User us = new User();
 		/**
-		 * created method testFirstNameInvalidMustReturnFalse for false condition
+		 * calling checkFName method to see first Name is valid
 		 */
-		public void testFirstNameInvalidMustReturnFalse()
-		{
-			User us = new User();
-			boolean isFnameValid = us.checkFName("almas");
-			Assert.assertFalse(isFnameValid);
-		}
+		boolean isFNameValid = us.checkFName("Saiprakash");
+		Assert.assertTrue(isFNameValid);
+	}
 
+	@Test
+	/**
+	 * created method testFirstNameInvalidMustReturnFalse for false condition
+	 */
+	public void testFirstNameInvalidMustReturnFalse() 
+	{
+		User userRegistration = new User();
+		boolean isFnameValid = userRegistration.checkFName("saiprakash");
+		Assert.assertFalse(isFnameValid);
+	}
+
+	/**
+	 * created method testingLastName() to check last Name is valid or not
+	 */
+	@Test
+	public void testLastNameValidMustReturnTrue() 
+	{
+		User user = new User();
+		/**
+		 * calling L name method to see LastName is valid
+		 */
+		boolean isLnameValid = user.Lname("Beemari");
+		Assert.assertTrue(isLnameValid);
+	}
+
+	/**
+	 * created method testLastNameInvalidMustReturnFalse for false condition
+	 */
+	@Test
+	public void testLastNameValidMustReturnFalse() 
+	{
+		User us = new User();
+		boolean isLnameINValid = us.Lname("beemari");
+		Assert.assertFalse(isLnameINValid);
+	}
 }
