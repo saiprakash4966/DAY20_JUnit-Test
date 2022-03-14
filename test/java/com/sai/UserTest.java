@@ -92,7 +92,7 @@ public class UserTest
 		/**
 		 * calling checkPhoneNum method to see phoneNumber is valid
 		 */
-		boolean isPhoneNumberValid = us.checkPhoneNum("91 7903990740");
+		boolean isPhoneNumberValid = us.checkPhoneNum("91 9676113169");
 		Assert.assertTrue(isPhoneNumberValid);
 	}
 
@@ -103,7 +103,31 @@ public class UserTest
 	public void testPhoneNumber_MustReturnFalse()
 	{
 		User us = new User();
-		boolean isPhoneNumberInValid = us.checkPhoneNum("7903990740");
+		boolean isPhoneNumberInValid = us.checkPhoneNum("9676113169");
 		Assert.assertFalse(isPhoneNumberInValid);
+	}
+	@Test
+	/**
+	 * created testPassword_MustReturnTrue() for True condition
+	 */
+	public void testPassword_MustReturnTrue()
+	{
+		User us = new User();
+		/**
+		 * calling checkPassword method to see Password is valid
+		 */
+		boolean isPasswordValid = us.checkPassword("aabbccdd");
+		Assert.assertTrue(isPasswordValid);
+	}
+
+	@Test
+	/**
+	 * created testPassword_MustReturnFalse() for False condition
+	 */
+	public void testPassword_MustReturnFalse() 
+	{
+		User us = new User();
+		boolean isPasswordInValid = us.checkPassword("dcba");
+		Assert.assertFalse(isPasswordInValid);
 	}
 }
