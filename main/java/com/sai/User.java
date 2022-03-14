@@ -71,7 +71,7 @@ public class User
 		 */
 		public boolean checkPassword(String password)
 		{
-			return (password.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}$"));
+			return (password.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[*.!@#$%^&(){}:'<>,.>/~`_+=|].).{8,}$"));
 		}
 	}
 

@@ -116,7 +116,7 @@ public class UserTest
 		/**
 		 * calling checkPassword method to see Password is valid
 		 */
-		boolean isPasswordValid = us.checkPassword("Saishiva123");
+		boolean isPasswordValid = us.checkPassword("Saishiva@123");
 		Assert.assertTrue(isPasswordValid);
 	}
 
