@@ -58,4 +58,29 @@ public class UserTest
 		boolean isLnameINValid = us.Lname("beemari");
 		Assert.assertFalse(isLnameINValid);
 	}
+	@Test
+	/**
+	 * created method testEmailId_MustReturnTrue() for true condition
+	 */
+    public void testEmailId_MustReturnTrue()
+	{
+        User userRegistration = new User();
+        /**
+		 * calling checkEmail method to see mailId is valid
+		 */
+        boolean isEmailValid = userRegistration.checkEmail("almas.ab@gmail.com");
+        Assert.assertTrue(isEmailValid);
+    }
+
+    @Test
+    /**
+	 * created method testEmailId_MustReturnFalse() for false condition
+	 */
+
+    public void testEmailId_MustReturnFalse() 
+    {
+        User us = new User();
+        boolean isEmailInvalid = us.checkEmail("almas@.com");
+        Assert.assertFalse(isEmailInvalid);
+    }
 }
