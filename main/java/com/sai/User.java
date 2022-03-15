@@ -73,4 +73,23 @@ public class User
 	{
 		return (password.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[*.!@#$%^&(){}:'<>,.>/~`_+=|].).{8,}$"));
 	}
+	/**
+	 * creating method moodAnalyzer to check the mood happy or sad
+	 * 
+	 * @param fName-    passing FirstName
+	 * @param Lname-    Passing LastName
+	 * @param phoneNum- Passing PhoneNumber
+	 * @param emailID-  Passing EmailId
+	 * @param password- passing Password
+	 * @return -return to method created
+	 */
+
+	public String moodAnalyzer(String fName, String Lname, String phoneNum, String emailID, String password) {
+		if (checkFName(fName) == true && Lname(Lname) == true && checkEmail(emailID) == true
+				&& checkPhoneNum(phoneNum) == true && checkPassword(password) == true) {
+			return "HAPPY";
+		} else {
+			return "SAD";
+		}
+	}
 }
