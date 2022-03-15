@@ -68,7 +68,7 @@ public class UserTest
         /**
 		 * calling checkEmail method to see mailId is valid
 		 */
-        boolean isEmailValid = userRegistration.checkEmail("almas.ab@gmail.com");
+        boolean isEmailValid = userRegistration.checkEmail("saiprakashbeemari@gmail.com");
         Assert.assertTrue(isEmailValid);
     }
 
@@ -80,7 +80,7 @@ public class UserTest
     public void testEmailId_MustReturnFalse() 
     {
         User us = new User();
-        boolean isEmailInvalid = us.checkEmail("almas@.com");
+        boolean isEmailInvalid = us.checkEmail("saiprakashbeemari@.com");
         Assert.assertFalse(isEmailInvalid);
     }
     @Test
