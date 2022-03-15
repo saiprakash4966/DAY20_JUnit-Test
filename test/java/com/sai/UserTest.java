@@ -68,7 +68,7 @@ public class UserTest
         /**
 		 * calling checkEmail method to see mailId is valid
 		 */
-        boolean isEmailValid = userRegistration.checkEmail("saiprakashbeemari@gmail.com");
+        boolean isEmailValid = userRegistration.checkEmail("saiprakashbeemari@.com");
         Assert.assertTrue(isEmailValid);
     }
 
